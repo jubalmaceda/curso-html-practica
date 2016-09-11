@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Tablas HTML</title>
+		<meta charset="utf-8">
+		<meta name="description" content="clase de Tablas">
+	</head>
+	<body>
+		<h1>Tablas HTML</h1>
+		<section>
+			<h2>Etiquetas table, tr, td</h2>
+			<!--Las tablas presentan datos en formato tabla (filas y columnas, tipo excel)
+				<table></table> - contenedor de la tabla
+				<tr></tr> - table-row (fila)
+				<td></td> - table-data (aqui se insertan los datos)
+			-->
+			<table>
+				<tr>
+					<td>Hola mundo</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>4</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h2>Etiquetas th, thead, tbody, tfoot</h2>
+			<!--
+				<th></th> Son cabeceras de columnas, van antes del primer "tr" de ser necesario, pone el texto en negrita
+			-->
+			<table>
+				<tr>
+					<th>Lunes</th>
+					<th>Martes</th>
+					<th>Miercoles</th>
+				</tr>
+				<tr>
+					<td>veterinario</td>
+					<td>medico</td>
+					<td>curso</td>
+				</tr>
+				<tr>
+					<td>instituto</td>
+					<td>lavanderia</td>
+					<td>curso</td>
+				</tr>
+				<!--
+					<thead></thead> Es la cabecera e incluye a los "th"
+					<tbody></tbody> es el cuerpo e incluye los datos
+					<tfoot></tfoot> es el pie y debe ir antes de "body"
+				-->
+				<table>
+					<thead>
+						<tr>
+							<th>Mes</th>
+							<th>Productos Vendidos</th>
+							<th>Ingresos</th>
+							<th>Impuestos</th>
+							<th>Ganancias</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="4">Total</td>
+							<td>$2400.00</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>Enero</td>
+							<td>10</td>
+							<td>$500.00</td>
+							<td>$100.00</td>
+							<td>$400.00</td>
+						</tr>
+						<tr>
+							<td>Febrero</td>
+							<td>10</td>
+							<td>$500.00</td>
+							<td>$100.00</td>
+							<td>$400.00</td>
+						</tr>
+						<tr>
+							<td>Marzo</td>
+							<td>10</td>
+							<td>$500.00</td>
+							<td>$100.00</td>
+							<td>$400.00</td>
+						</tr>
+						<tr>
+							<td>Abril</td>
+							<td>10</td>
+							<td>$500.00</td>
+							<td>$100.00</td>
+							<td>$400.00</td>
+						</tr>
+						<tr>
+							<td>Mayo</td>
+							<td>10</td>
+							<td>$500.00</td>
+							<td>$100.00</td>
+							<td>$400.00</td>
+						</tr>
+						<tr>
+							<td>Junio</td>
+							<td>10</td>
+							<td>$500.00</td>
+							<td>$100.00</td>
+							<td>$400.00</td>
+						</tr>
+					</tbody>
+				</table>
+			</table>
+		</section>
+		<section>
+			<h2>caption, colgroup, col, colspan y rowspan</h2>
+			<!--
+				<caption></caption> se usa para nombrar a la tabla, debe ir despues de la apertura "table"
+			-->
+			<table>
+				<caption>Registrados al evento</caption>
+				<tr>
+					<th>nombre</th>
+					<th>apellido</th>
+					<th>correo</th>
+					<th>telefono</th>
+				</tr>
+				<tr>
+					<td>Alvaro</td>
+					<td>Felipe</td>
+					<td>asdf@qwe.asd</td>
+					<td>123-456-789</td>
+				</tr>
+				<tr>
+					<td>Alvaro</td>
+					<td>Felipe</td>
+					<td>asdf@qwe.asd</td>
+					<td>123-456-789</td>
+				</tr>
+			</table>
+
+			<!--
+				<colgroup></colgroup> se usa para definir atributos para columnas
+				dentro deben ir etiquetas <col> que representan cada columna.
+				usando span="numero" en <col>, se puede referenciar a varias columnas
+				se pueden añadir atributos para toda la columna
+			-->
+			<table>
+				<colgroup>
+					<col><!--1ª columna-->
+					<col><!--2ª columna-->
+					<col><!--3ª columna-->
+					<col style="background: yellow"><!-- CSS, 4ª columna-->
+					<col><!--5ª columna-->
+				</colgroup>
+<!--				<colgroup>
+					<col span="3"> marca este col como 3 columnas
+					<col style="background: yellow">
+				</colgroup> 
+-->
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+				</tr>
+			</table>
+			<!--
+				rowspan combina varias filas
+				colspan combina varias columnas
+				ambos son atributos de <td></td> o <th></th>, nunca de <tr></tr>
+			-->
+			<table>
+				<tr>
+					<td rowspan="2">a</td><!-- si usas rowspan solo, rompera la tabla, por lo que idealmente deberias eliminar el a en la segunda fila -->
+					<td>b</td>
+					<td>c</td>
+				</tr>
+				<tr>
+					<!-- <td>a</td> -->
+					<td>b</td>
+					<td>c</td>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td colspan="2">b</td>
+					<!-- <td>c</td> -->
+				</tr>
+			</table>
+		</section>
+	</body>
+</html>

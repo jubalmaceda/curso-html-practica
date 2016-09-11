@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Microdatos</title>
+		<meta charset="utf-8">
+		<meta name="description" content="microdatos">
+	</head>
+	<body>
+		<h1>Uso de microdatos</h1>
+		<!-- Microdatos
+		Permiten especificar el significado del texto, usando un set de parametros especificados en
+		schema.org
+
+		se indican con atributos:
+		
+		itemscope (indica contexto, es booleano o vacio)
+		itemtype (indica el tipo de schema)
+		itemprop (indica el tipo de dato) -->
+		<article>
+			<img src="persona.jpg" alt="Persona X">
+			<h2>Nombre Persona</h2>
+			<p>Cargo Persona</p>
+			<p>Correo Persona</p>
+			<p>Direccion Persona</p>
+		</article>
+
+		<article itemscope itemtype="http://schema.org/Person">
+			<img itemprop="image" src="persona.jpg" alt="Persona X">
+			<h2 itemprop="name">Nombre Persona</h2>
+			<p itemprop="jobTitle">Cargo Persona</p>
+			<p itemprop="email">Correo Persona</p>
+			<p itemprop="address">Direccion Persona</p>
+		</article>
+
+		<article>
+			<img src="libro.jpg" alt="Libro">
+			<h2>Don Quijote de la Mancha</h2>
+			<p>La historia de Don Quijote y sus aventuras</p>
+			<p>Miguel de Cervantes</p>
+			<p>1535</p>
+		</article>
+
+		<article itemscope itemtype="http://schema.org/Book">
+			<img itemprop="image" src="libro.jpg" alt="Libro">
+			<h2 itemprop="name">Don Quijote de la Mancha</h2>
+			<p itemprop="about">La historia de Don Quijote y sus aventuras</p>
+			<p itemprop="author">Miguel de Cervantes</p>
+			<p itemprop="copyrightYear">1535</p>
+		</article>
+	</body>
+</html>

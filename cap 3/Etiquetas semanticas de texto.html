@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Etiquetas semanticas de texto.</title>
+		<meta charset="utf-8">
+		<meta name="description" content="semantica de texto y microdatos">
+	</head>
+	<body>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam tempora consequatur ad ipsum facere eligendi maxime sunt illo ea sed modi, voluptatem nam perferendis velit, veniam, doloremque harum ullam! Eos.</p>
+		<a href="http://cursos.escueladigital.pe">Ir a los cursos</a> <!-- <a link>hyperlink</a>
+		los inline pueden ir dentro de block <p><a></a></p> o separados <p></p><a></a>-->
+		<!-- Etiquetas inline
+		1.- Etiquetas de formato
+			<b></b> negrita (no es recomendada)
+			<i></i> italica (no es recomendada)
+			<u></i> subrayado (no es recomendada)
+			<sup></sup> superindice
+			<sub></sub> subindice
+			<del></del> linea media indica eliminado
+			<mark></mark> destacar indica importancia
+			<strong></strong> texto en negrita, indica importancia (importante)
+			<em></em> texto en italica, indica enfasis (otro tono)
+		-->
+		<b>Bold text</b>
+		<i>Italic text</i>
+		<u>Underline text</u>
+		<sup>Superindice</sup>
+		<sub>Subindice</sub>
+		<del>Midline</del>
+		<mark>Highlight</mark>
+		<strong>Important Text</strong>
+		<em>Emphatic text</em>
+
+		<p>
+			x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup>
+		</p>
+		<p>
+			H<sub>2</sub>O
+		</p>
+		<p>
+			Hoy, todos los productos a <del>$1.990</del> $990
+		</p>
+		<p>
+			Estudiar de la página <mark>100 a la 120</mark>.
+		</p>
+		<!--
+		2.- Etiquetas de código
+		<code></code> codigo
+		<var></var> variables
+		<kbd></kbd> atajos de teclado
+		-->
+		<p>
+			Para abrir un archivo, precionar <kbd>CTRL + O</kbd>
+		</p>
+		<p>
+			Las funciones se definen con la palabra <code>function</code>.
+			Ejemplo de una funcion en JavaScript:
+		</p>
+		<pre>
+			<code>
+				function(){
+					console.log("Hola mundo.");
+				}
+			</code>
+		</pre> <!-- Texto preformateado, block, se muestra igual que en el codigo -->
+		<!-- 
+		3.- Citas
+		<q></q> inline, pone "" solo
+		<blockquote></blockquote> block, lo tabula
+		-->
+		<p>
+			Sócrates dijo: <q><em>Solo sé que nada sé</em></q>.
+		</p>
+		<p>Sócrates dijo:</p>
+		<blockquote>
+			<em>"Solo sé que nada sé"</em>
+		</blockquote>
+	</body>
+</html>

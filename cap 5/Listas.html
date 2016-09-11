@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Listas HTML</title>
+		<meta charset="utf-8">
+		<meta name="description" content="clase de listas">
+	</head>
+	<body>
+		<!--emet
+			p{parrafo $}*5 tab
+			resultado:
+			<p>parrafo 1</p>
+			<p>parrafo 2</p>
+			<p>parrafo 3</p>
+			<p>parrafo 4</p>
+			<p>parrafo 5</p>
+			$ = enumera
+			*x cantidad
+		-->
+		<h1>Listas HTML</h1>
+		<section>
+			<!--Existen 3 tipos de listas
+				<ol></ol> ordered list (1 2 3 4...)
+				<ul></ul> unordered list (* * * *...)
+				<dl></dl> definition list
+
+				<ul></ul> y <ol></ol> son contenedores de listas, cada objeto se indica con <li></li> (list item)
+			-->
+			<h2>Listas ol y ul</h2>
+			<ol>
+				<li>listas con ol</li>
+				<li>Lunes</li>
+				<li>martes</li>
+				<li>miercoles</li>
+			</ol>
+			<ul>
+				<li>listas con ul</li>
+				<li>lunes</li>
+				<li>martes</li>
+				<li>miercoles</li>
+			</ul>
+		</section>
+
+		<section>
+			<!--Las listas ol y ul se pueden anidar e incluso combinarse
+				Para hacerlo la lista debe estar en un li
+			-->
+			<ol>
+				<li>listas con ol anidadas</li>
+				<li>Lunes
+					<ul>
+						<li>Llevar el perro al vet.</li>
+						<li>Visitar medico</li>
+					</ul>
+				</li>
+				<li>martes
+					<ul>
+						<li>Presentar proyecto</li>
+						<li>llevar la la ropa a la lavanderia</li>
+					</ul>
+				</li>
+				<li>miercoles
+					<ul>
+						<li>Clase de HTML</li>
+					</ul>
+				</li>
+			</ol>
+		</section>
+		<section>
+			<h2>Atributos de las listas ol y ul</h2>
+			<!--Atributos de ol
+				type="1|a|A|i|I"
+				1 - 1 2 3 4 5
+				a - a b c d e
+				A - A B C D E
+				i - i ii iii iv v
+				I - I II III IV V
+
+				start="numero"
+				numero - indica en que numero comienza la numeracion
+
+				reversed - es un atributo vacio que numera hacia atras
+			-->
+			<ol type="I" start="10" reversed>
+				<li>item 1</li>
+				<li>item 2</li>
+				<li>item 3</li>
+				<li>item 4</li>
+				<li>item 5</li>
+			</ol>
+
+			<h2>Atributo de ul</h2>
+			<!--Atributo de ul
+				type="disc|circle|square"
+				disc - el contador es un circulo negro (default)
+				circle - el contador es un circulo vacio
+				square - el contador es un cuadrado
+			-->
+			<ul type="square">
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+				<li>Item 4</li>
+				<li>Item 5</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Listas de definicion dl</h2>
+			<!--dl es un contenedor de elementos en pares:
+				<dt></dt> definition term (elemento)
+				<dd></dd> definition description (explicacion)
+
+				Este tipo de listas es util en glosarios, diccionarios, enciclopedias etc
+				En un mismo dl, se pueden anidar mas de un dt y dd
+				<dl>
+					<dt></dt>
+					<dd></dd>
+
+					<dt></dt>
+					<dd></dd>
+
+					<dt></dt>
+					<dd></dd>
+				</dl>
+			-->
+			<dl>
+				<dt>HTML<dt>
+				<dd>Lengiaje de marcado de hipertexto</dd>
+
+				<dt>CSS</dt>
+				<dd>Hojas de estilo en cascada</dd>
+
+				<dt>JavaScript</dt>
+				<dd>Lengiaje de programacion del lado del cliente</dd>
+			</dl>
+		</section>
+		<section>
+			<h2>Details and Summary</h2>
+			<!--<details></details> & <summary></summary> etiquetas en desarrollo
+				permiten tener un "acordeon" de definicion y descripcion
+			-->
+			<details>
+				<summary>HTML5</summary>
+				<p>Hypertext Language Markup</p>
+			</details>
+		</section>
+	</body>
+</html>

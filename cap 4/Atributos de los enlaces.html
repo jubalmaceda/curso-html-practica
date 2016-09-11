@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Atributos de los enlaces</title>
+		<meta charset="utf-8">
+		<meta name="description" content="atributos de enlaces">
+	</head>
+	<body>
+		<h1>Atributos de los enlaces</h1>
+		<!--Title
+			sirve para poner informacion adicional
+			se ve como una acotacion (tooltip) bajo el mouse al pasarlo por el enlace
+		 -->
+		<a href="http://cursos.escueladigital.pe" title="Inscribete a los cursos de HTML5 ok, no">Ir a los cursos (tooltip)</a>
+
+		<!--Rel
+			Indica la relacion del origen y el destino.
+			el valor nofollow le dice a google que no siga el enlace para que este no gane SEO, se usa en redes sociales o blogs por ejemplo
+		-->
+		<p><a href="http://cursos.escueladigital.pe" rel="nofollow">Ir a los cursos (nofollow)</a></p>
+
+		<!--Target
+			_blank (nueva ventana)
+			_self (misma ventana, predeterminado)
+			_parent (abre fuera del frame, frame o pag superior)
+			_top (abre en la ventana principal (frames))
+		-->
+		<iframe src="/curso-html-practica/cap 4/destino.html" width="600" height="300"></iframe><!--mete un recurso dentro de otro-->
+
+		<p><iframe src="http://fate-go.cirnopedia.info/servant_all.php" width="1300" height="600"></iframe></p>
+
+		<!--Download (HTML5)
+			fuerza al navegador a descargar un archivo en lugar de abrirlo
+			si se pone ="nombre", reemplaza el nombre original del archivo por este al descargarlo
+		-->
+		<p><a href="/curso-html-practica/cap 4/img.jpg" download="Best Husbando">Best Husbando</a></p>
+	</body>
+</html>

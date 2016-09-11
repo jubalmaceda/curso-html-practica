@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Imagenes</title>
+		<meta charset="utf-8">
+		<meta name="description" content="clase de Imagenes">
+		<style>
+			img{
+				max-width: 100%;
+			}
+		</style> <!-- CSS, imagen del ancho de pag maximo -->
+	</head>
+	<body>
+		<h1>Imagenes en HTML</h1>
+		<section>
+			<h2>Tipos de imagenes</h2>
+			<!--Existen 2 tipos de imagenes
+				*Render, formadas por pixeles.
+				hay 3 formatos:
+					*jpg - formato con perdida, ideal para fotograia y diseño
+					*png - formato sin perdida, ideal para logos, capturas de pantalla e imagenes con colores solidos
+					*gif - fomato con poca profundidad de color (256 colores), admite transparencias y animaciones
+
+				*Vectoriales, son codigo xml que el navegador interpreta, no se pixelea.
+				esta el formato
+					*svg
+			-->
+			<ul>
+				<li>Imagenes Render
+					<ul>
+						<li>.jpg</li>
+						<li>.png</li>
+						<li>.gif</li>
+					</ul>
+				</li>
+				<li>Imagenes vectoriales
+					<ul>
+						<li>.svg</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Etiqueta img</h2>
+			<!-- La etiqueta <img src="" alt="">
+				requiere 2 atributos:
+				src="" indica la ruta
+				alt="" texto alternativo, para las ocaciones donde la imagen no se muestra o para lectores de pantalla
+			-->
+			<img src="mah king.jpg" alt="Artoria">
+		</section>
+		<section>
+			<h2>comprimir imagenes para web</h2>
+			<!-- Antes de comprimir, debes redimensionar la imagen a la resolucion que realmente necesitas.
+				Las imagenes para web deben ser de 72ppp.
+
+				El formato jpg, admite compresiones de 0 a 100%
+				El formato png, se comprime en png8 (256 colores)
+			-->
+			<a href="http://www.tinypng.com" target="_blank">Tiny PNG</a>
+		</section>
+		<section>
+			<h2>Elementos figure y figcaption de HTML5</h2>
+			<!--
+				<figure></figure> - sirve para encerrar elementos multimedia como imagenes o videos acompañados de una leyenda
+				<figcaption></figcaption> - leyendas para figure
+				<figure>
+					<img src="" alt="">
+					<figcaption>
+					
+					</figcaption>
+				</figure>
+		</section>
+			-->
+			<figure>
+				<img src="mah king.jpg" alt="mah king">
+				<figcaption>
+					Artoria Pendagon - Archer. Fuente: <a href="http://fate-go.cirnopedia.info/servant_profile.php?servant=129" target="_blank">Cirnopedia</a>
+				</figcaption>
+			</figure>
+		</section>
+		<section>
+			<h2>Elemento picture de HTML5</h2>
+			<!--
+				<picture></picture> - imagenes con responsive web design, imagenes usadas segun distintos tamaños de ventana (ejemplo pc, cel, tablet o simplemente achicando la ventana)
+
+				<picture>
+					<source srcset="" media="(min-width: Xpx)"> - > tamañp
+					<source srcset="" media="(min-width: Xpx)"> - srcset="" se utiliza en los <source>
+					<source srcset="" media="(min-width: Xpx)"> - media="(min-width: Xpx)" pregunta por el ancho minimo para que una imagen aparezca, la imagen de ancho mayor debe ir primero
+					<source> - la cantidad de imagenes necesarias para el proyecto
+					<source>
+					<source>
+					...
+					<source srcset="" media="(min-width: Xpx)"> - < tamaño
+					<img src="" alt=""> - imagen base, idealmente la de menor tamaño
+				</picture>
+			-->
+			<picture>
+				<source srcset="illya.png" media="(min-width: 1000px)">
+				<source srcset="kuro.png" media="(min-width: 600px)">
+				<img src="mah king.jpg" alt="Artoria">
+			</picture>
+		</section>
+		<section>
+			<a href="http://www.pexels.com" target="_blank">Imagenes gratis a</a>
+			<p><a href="http://www.pixabay.com" target="_blank">Imagenes gratis b</a></p>
+		</section>
+	</body>
+</html>

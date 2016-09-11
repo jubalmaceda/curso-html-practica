@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Formularios</title>
+		<meta charset="utf-8">
+		<meta name="description" content="clase de formularios">
+	</head>
+	<body>
+		<h1>Formularios</h1>
+		<!--
+			Todo formulario debe encerrarse con la etiqueta <form action=""></form>
+			El atributo action="" envia el formulario a otro archivo para ser procesado
+			*En este caso se usara un HTML solo por ejemplo, normalmente no tiene ninguna utilidad (HTML no es un lenguaje)
+
+			Hay 3 formas de enviar un formulario:
+				1.- <input type="submit"> - boton(recomendada)
+				2.- <button>Enviar</button> - boton
+				3.- <input type="text"> - presionar enter al ingresar algo.
+		-->
+		<form action="procesar.html">
+			<input type="submit">
+			<input type="text">
+			<button>Enviar</button>
+		</form>
+		<br>
+
+		<!--El campo mas usado es el <input type="">
+			Hay varios tipos de input que se distinguen con el atributo type=""
+			cada campo puede llevar una etiqueta <label for=""></label>
+			El valor del atributo for, debe coincidir con el ID del campo al cual corresponde
+		-->
+		<!--<input type="text">
+			Ingreso de texto
+		-->
+		<!--<fieldset></fieldset>
+			crea un espacio donde agrupar campos
+			<legend></legend>
+			asigna un nombre a un grupo de campos
+		-->
+		<form action="procesar.html">
+			<fieldset>
+			<legend>Datos personales</legend>
+				<div>
+					<label for="nombres">Nombres y apellidos</label>
+					<input type="text" id="nombres">
+				</div>
+				<div>
+					<label for="Correo">Correo electronico</label>
+					<input type="text" id="Correo">
+				</div>
+				<div>
+					<label for="telefono">telefono</label>
+					<input type="text" id="telefono">
+				</div>
+			</fieldset>
+
+			<!--
+				label e input, no tienen un orden obligatorio, pero deben unirse entre si con el for="" = id=""
+			-->
+			<!--<input type="checkbox">
+				cuadrados de seleccion, se pueden deseleccionar a gusto
+			-->
+			<fieldset>
+			<legend>Preferencias</legend>
+				<div>
+					<input type="Checkbox" id="checkbox1">
+					<label for="checkbox1">Chechbox 1</label>
+					<br> <!-- salto de linea -->
+					<input type="Checkbox" id="checkbox2">
+					<label for="checkbox2">Chechbox 2</label>
+					<br>
+					<input type="Checkbox" id="checkbox3">
+					<label for="checkbox3">Chechbox 3</label>
+					<br>
+					<input type="Checkbox" id="checkbox4">
+					<label for="checkbox4">Chechbox 4</label>
+				</div>
+				<br>
+
+				<!--<input type="radio">
+					circulos de seleccion, no se pueden deseleccionar una vez presionados
+					con el atributo name="", se pueden cambiar las selecciones entre un grupo de radio
+					en HTML, name="" solo se utiliza para identificar areas en las que se usa type="radio". Sin embargo, todos los campos deberian llevar el atributo name="" ya que los lenguajes de backend los utilizan para extraer datos
+				-->
+				<div>
+					<input type="radio" id="radio1" name="radio">
+					<label for="radio1">Radio 1</label>
+					<br>
+					<input type="radio" id="radio2" name="radio">
+					<label for="radio2">Radio 2</label>
+					<br>
+					<input type="radio" id="radio3" name="radio">
+					<label for="radio3">Radio 3</label>
+					<br>
+					<input type="radio" id="radio4" name="radio">
+					<label for="radio4">Radio 4</label>
+				</div>
+			</fieldset>
+
+			<!--<select name="" id=""></select>
+				dibuja una lista desplegable de opciones, todas con la etiqueta <option value=""></option>
+				el atributo value="" al igual que name="", no hace nada en HTML pero es requerido por el backend
+			-->
+			<fieldset>
+			<legend>Otra informacion</legend>
+				<div>
+					<label for="edad">Selecciona tu edad</label><br>
+					<select name="edad" id="edad">
+						<option value="0">Menos de 10 años</option>
+						<option value="1">De 10 a 20 años</option>
+						<option value="2">De 20 a 30 años</option>
+						<option value="3">Mas de 30 años</option>
+					</select>
+				</div>
+
+				<!--<optgroup></optgroup>
+					permite agrupar mas de un <option value=""></option>
+					el atributo label="" presenta un nombre para cada grupo de opciones
+				-->
+				<div>
+					<br>
+					<label for="edad">Selecciona tu edad</label><br>
+					<select name="edad" id="edad">
+						<optgroup label="Niños y Jovenes">
+						<option value="0">Menos de 10 años</option>
+						<option value="1">De 10 a 20 años</option>
+						</optgroup>
+						<optgroup label="Adultos">
+						<option value="2">De 20 a 30 años</option>
+						<option value="3">De 30 a 40 años</option>
+						<option value="4">De 40 a 50 años</option>
+						<option value="5">De 50 a 60 años</option>
+						</optgroup>
+						<optgroup label="Adultos mayores">
+						<option value="6">Mas de 60 años</option>
+						</optgroup>
+					</select>
+				</div>
+				
+				<!--<textarea name="" id="" cols="30" rows="10"></textarea>
+					dibuja un area de varias columnas y filas para escribir texto
+				-->
+				<div>
+					<label for="mensaje">Deje su mensaje</label>
+					<br>
+					<textarea name="mensaje" id="mensaje" cols="50" rows="5"></textarea>
+				</div>
+			</fieldset>
+
+			<!--<input type="submit">
+				crea un boton de enviado de a cuerdo al idioma del navegador
+				el atributo value="" permite cambiar el mensaje del boton
+			-->
+			<br>
+			<input type="submit" value="Enviar Formulario">
+		</form>
+	</body>
+</html>

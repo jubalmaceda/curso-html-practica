@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Enlaces</title>
+		<meta charset="utf-8">
+		<meta name="description" content="clase 4 de enlaces">
+	</head>
+	<body>
+		<h1>Enlaces</h1>
+		<!--Enlaces
+			Se indican con la etiquieta <a></a> (anchor) y requieren el atributo href="" que señala su destino.
+			No confundir con la etiqueta <link>
+		-->
+
+		<p><a href="http://cursos.escueladigital.pe">Ir a los cursos</a></p>
+
+		<!-- Si queremos que se abra en una pestaña aparte, se usa el atributo 
+		target="_blank"
+		-->
+
+		<p><a href="http://cursos.escueladigital.pe" target="_blank">Ir a los cursos (en una nueva ventana)</a></p>
+
+		<!--Rutas
+			Las rutas le indican a un sistema como acceder a un recurso (como encontrarlo)
+			Hay 3 tipos de ruta:
+
+			1.-Absolutas
+			2.-Relativas
+			3.-Relativas a la raiz
+
+			1.-Las rutas absolutas son url unicas y comienzan con un protocolo, el mas conocido es http:// (hay otros como https:// ftp://)
+		-->
+
+		<p><a href="http://fate-go.cirnopedia.info" target="_blank">Ir a la cirnopedia</a></p>
+
+		<!--
+			2.-Las rutas relativas son relativas al archivo de origen:
+				-Origen y Destino en la misma carpeta.
+				Se pone el nombre del archivo.
+		-->
+
+		<p><a href="destino.html">Ir al destino (en la misma carpeta)</a></p>
+
+		<!--
+				-Origen y Destino en distintas carpetas.
+				En este caso se indica la ruta separando las carpetas con el signo / (slash) hasta llegar al archivo de destino o con ../ para subir un nivel.
+				Nunca se debe comenzar con un slash (/) ya que es referemcia a root
+		-->
+
+		<p><a href="subcarpeta/destino2.html">Ir al destino 2 (en el otra carpeta)</a></p>
+
+		<p><a href="subcarpeta/subcarpeta2/destino3.html">Ir al destino 3 (en el otra carpeta)</a></p>
+
+		<!--
+			3.-Las rutas relativas a la raiz se comienzan con un /
+			con un href="/" se vuelve a root (index)
+		-->
+		
+		<h2>Relativas a la raiz</h2>
+
+		<p><a href="/curso-html-practica/cap 4/destino.html">Ir al destino (en la misma carpeta)</a></p>
+
+		<p><a href="/curso-html-practica/cap 4/subcarpeta/destino2.html">Ir al destino 2 (en el otra carpeta)</a></p>
+
+		<p><a href="/curso-html-practica/cap 4/subcarpeta/subcarpeta2/destino3.html">Ir al destino 3 (en el otra carpeta)</a></p>
+
+	</body>
+</html>
